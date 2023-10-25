@@ -1,0 +1,66 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Bring Your Data",
+    description: "",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "100%",
+    description: "",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "On-Demand",
+    description: "",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Broad ",
+    description: "",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "SEO Prepared",
+    description:
+      "Take the pain out of SEO and syndication, let us handle your sitemaps, RSS feeds, pagination and collections",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "Community",
+    description:
+      "notAkrista is an open source powered organization by a myriad of projects and contributions from the community.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Everything you need for your next project
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    We help you identify opportunities to improve your business, secure your
+    data and assets. Taking the best parts of state-of-the-art Open Source tools
+    and adding our own unique blend of solutions.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

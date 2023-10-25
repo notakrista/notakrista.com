@@ -1,0 +1,28 @@
+version: "3"
+networks:
+  default:
+    name: production
+    external: true
+services:
+  notakrista.com:
+    container_name: notakrista.com
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # ports:
+    #   - "4321:8080"
+    restart: unless-stopped
+    # labels:
+    #   - "com.centurylinklabs.watchtower.enable=true"
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.notakrista.entrypoints=http"
+    #   - "traefik.http.routers.notakrista.rule=Host(`notakrista.com`)"
+    #   - "traefik.http.middlewares.notakrista-https-redirect.redirectscheme.scheme=https"
+    #   - "traefik.http.routers.notakrista.middlewares=notakrista-https-redirect"
+    #   - "traefik.http.routers.notakrista-secure.entrypoints=https"
+    #   - "traefik.http.routers.notakrista-secure.rule=Host(`notakrista.com`)"
+    #   - "traefik.http.routers.notakrista-secure.tls=true"
+    #   - "traefik.http.routers.notakrista-secure.service=notakrista"
+    #   - "traefik.http.services.notakrista.loadbalancer.server.port=8080"
+    #   - "traefik.docker.network=production"
+    #   - "traefik.http.routers.notakrista-secure.middlewares=authelia@docker"
