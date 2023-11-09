@@ -28,6 +28,15 @@ const makeTitle = title ? title + " | " + "notAkrista" : "notAkrista";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXWZ0STGDY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-LXWZ0STGDY');
+    </script>
     <SEO
       title={makeTitle}
       description="notAkrista is a web solutions startup that helps you build your online presence."
